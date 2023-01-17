@@ -5,14 +5,17 @@ function Timer({ intervalValue }) {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
+    console.log(intervalValue);
     const intervalId = setInterval(() => {
-      setValue((value) => value + 1);
+      if (intervalValue) setValue((value) => value + 1);
     }, intervalValue);
 
     return () => {
       clearInterval(intervalId);
     };
   }, [intervalValue]);
+
+  useEffect(() => console.log("test"), []);
   return (
     <div className="container">
       <h1>Timer</h1>
@@ -31,13 +34,13 @@ export function ComponentUseEffect() {
   return (
     <div className="container">
       <Timer intervalValue={intervalValue}></Timer>
-      <Button varian="primary" onClick={() => handleIntervalClick(100)}>
+      <Button variant="primary" onClick={() => handleIntervalClick(100)}>
         100ms
-      </Button>
-      <Button varian="primary" onClick={() => handleIntervalClick(500)}>
+      </Button>{" "}
+      <Button variant="primary" onClick={() => handleIntervalClick(500)}>
         500ms
-      </Button>
-      <Button varian="primary" onClick={() => handleIntervalClick(1000)}>
+      </Button>{" "}
+      <Button variant="primary" onClick={() => handleIntervalClick(1000)}>
         1s
       </Button>
     </div>

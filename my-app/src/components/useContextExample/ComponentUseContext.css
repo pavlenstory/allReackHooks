@@ -1,0 +1,10 @@
+.container-dark {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    border-radius: 5px;
+}
+.container-light {
+    background-color: rgb(235,235,235);
+    color: black;
+    border-radius: 5px;
+}
