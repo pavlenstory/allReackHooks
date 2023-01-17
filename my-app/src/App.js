@@ -4,6 +4,7 @@ import { ComponentUseState } from "./components/useStateExample/ComponentUseStat
 import { ThemeContext } from "./components/useContextExample/themeContext";
 import { ComponentUseContext } from "./components/useContextExample/ComponentUseContext";
 import { useState } from "react";
+import { ComponentUseReducer } from "./components/useReducerExample/ComponetUseReducer";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -18,6 +19,7 @@ function App() {
       <ThemeContext.Provider value={{ theme, toggle: toggleTheme }}>
         <ComponentUseContext />
       </ThemeContext.Provider>
+      <ComponentUseReducer />
     </div>
   );
 }
