@@ -1,10 +1,12 @@
 import "./App.css";
-import { Component } from "./components/useStateExample/Component";
+import { ComponentUseEffect } from "./components/useEffectExample/Component";
+import { ComponentUseState } from "./components/useStateExample/ComponentUseState";
 
 function App() {
   return (
     <div className="App">
-      <Component />
+      <ComponentUseState />
+      <ComponentUseEffect />
     </div>
   );
 }

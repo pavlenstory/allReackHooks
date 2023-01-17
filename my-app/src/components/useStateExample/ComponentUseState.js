@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 
 const getInitialState = () => false;
 
-export function Component() {
+export function ComponentUseState() {
   const [visible, setVisibility] = useState(getInitialState);
   const handleClick = () => {
     setVisibility((currentValue) => !currentValue);
