@@ -2,6 +2,12 @@ import { useReducer } from "react";
 import { Button } from "react-bootstrap";
 import { act } from "react-dom/test-utils";
 
+const initState = (initialCount) => {
+  return {
+    count: initialCount,
+  };
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
     case "increment":
@@ -11,7 +17,7 @@ const reducer = (state, action) => {
       return { count: state.count - 1 };
       break;
     case "reset":
-      return { count: action.payload };
+      return initState(action.payload);
       break;
     default:
       return state;
@@ -19,7 +25,7 @@ const reducer = (state, action) => {
 };
 
 export function ComponentUseReducer({ initialCount = 0 }) {
-  const [state, dispath] = useReducer(reducer, { count: initialCount });
+  const [state, dispath] = useReducer(reducer, initialCount, initState);
 
   function increment() {
     dispath({
