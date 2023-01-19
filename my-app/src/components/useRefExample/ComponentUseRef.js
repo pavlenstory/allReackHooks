@@ -10,7 +10,6 @@ function Timer() {
     intervalId.current = setInterval(() => {
       setValue((currentValue) => currentValue + 1);
     }, 1000);
-
     return () => {
       console.log("cleared");
       clearInterval(intervalId.current);
@@ -18,7 +17,7 @@ function Timer() {
   });
 
   const handleCancelClick = () => {
-    clearInterval(intervalId);
+    clearInterval(intervalId.current);
   };
 
   return (
@@ -37,7 +36,7 @@ export function ComponentUseRef() {
     setName(event.target.value);
   };
   const input = useRef();
-
+  console.log(input);
   useEffect(() => {
     input.current.focus();
   }, []);
