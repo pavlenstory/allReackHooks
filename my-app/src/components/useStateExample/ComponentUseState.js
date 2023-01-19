@@ -10,8 +10,8 @@ export function ComponentUseState() {
   };
   return (
     <div className="container">
-      <h1>What is React</h1>
-
+      <h1>Check useState</h1>
+      <h2>What is React</h2>
       <Button variant="primary" onClick={handleClick}>
         {visible ? "Hide" : "Show"}
       </Button>

@@ -44,7 +44,8 @@ export function ComponentUseReducer({ initialCount = 0 }) {
   }
   return (
     <div className="container">
-      <h1>Work with values</h1>
+      <h1>Check useReducer</h1>
+      <h2>Work with values</h2>
       <p>{state.count}</p>
       <Button variant="primary" onClick={increment}>
         Increment

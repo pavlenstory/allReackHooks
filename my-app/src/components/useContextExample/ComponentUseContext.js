@@ -7,7 +7,7 @@ export const Card = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className={`constiner container-${theme}`}>
-      <h1>Theme {theme}</h1>
+      <h2>Theme {theme}</h2>
     </div>
   );
 };
@@ -16,6 +16,7 @@ export function ComponentUseContext() {
   const { toggle } = useContext(ThemeContext);
   return (
     <div className="container">
+      <h1>Check useContext</h1>
       <Card />
       <Button variant="primary" onClick={toggle}>
         Change theme

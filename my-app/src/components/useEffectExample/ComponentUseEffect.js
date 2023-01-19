@@ -18,8 +18,8 @@ function Timer({ intervalValue }) {
   useEffect(() => console.log("test"), []);
   return (
     <div className="container">
-      <h1>Timer</h1>
-      <h2>{value}</h2>
+      <h2>Timer</h2>
+      <h3>{value}</h3>
     </div>
   );
 }
@@ -33,6 +33,7 @@ export function ComponentUseEffect() {
 
   return (
     <div className="container">
+      <h1>Check useEffect</h1>
       <Timer intervalValue={intervalValue}></Timer>
       <Button variant="primary" onClick={() => handleIntervalClick(100)}>
         100ms
