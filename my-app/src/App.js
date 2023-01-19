@@ -5,6 +5,8 @@ import { ThemeContext } from "./components/useContextExample/themeContext";
 import { ComponentUseContext } from "./components/useContextExample/ComponentUseContext";
 import { useState } from "react";
 import { ComponentUseReducer } from "./components/useReducerExample/ComponetUseReducer";
+import { ComponentUseCallback } from "./components/useCallbackExample/ComponentUseCallback";
+import { ComponentUseMemo } from "./components/useMemoExample/ComponentUseMemo";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -20,6 +22,8 @@ function App() {
         <ComponentUseContext />
       </ThemeContext.Provider>
       <ComponentUseReducer />
+      <ComponentUseCallback />
+      <ComponentUseMemo />
     </div>
   );
 }

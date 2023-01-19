@@ -1,6 +1,5 @@
 import { useReducer } from "react";
 import { Button } from "react-bootstrap";
-import { act } from "react-dom/test-utils";
 
 const initState = (initialCount) => {
   return {
