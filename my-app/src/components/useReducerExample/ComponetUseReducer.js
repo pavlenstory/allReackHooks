@@ -42,6 +42,7 @@ export function ComponentUseReducer({ initialCount = 0 }) {
       payload: initialCount,
     });
   }
+
   return (
     <div className="container">
       <h1>Check useReducer</h1>
